@@ -69,4 +69,13 @@ if  (!is_admin()) {
 }
 
 
+// ------------------------------------------------------------------
+// Remove RSD Link from header (Windows Live Writer)
+//
+if  (!is_admin()) {
+    remove_action ('wp_head', 'rsd_link');
+    remove_action ('wp_head', 'wlwmanifest_link');
+}
+
+
 ?>
